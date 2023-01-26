@@ -1,3 +1,22 @@
+//what we have available
+    //Variables:
+    //Data Types: 
+        //Numbers: Operators and Operands
+        //string
+        //Boolean
+        //null
+        //undefined
+
+        //Need to understand Objects!
+
+    //conditions: If/Else
+        //Logical Operators: AND, OR, NOT
+        //Need to Understand Switch Statment!
+
+    //Funtions
+        //parameters
+        //return: Need to understand!
+
 function getComputerChoice() {
     const Rock = 1;
     const Paper = 2;
