@@ -18,39 +18,30 @@
         //return: Need to understand!
 
 function getComputerChoice() {
-    const Rock = 1;
-    const Paper = 2;
-    const Scissor = 3;
-    Math.random()
+    //Rock = 0
+    //Paper = 1
+    //Scissor = 2
+    const Rock = 0;
+    const Paper = 1;
+    const Scissor = 2;
+    Math.floor(Math.random() * 3);
     console.log(Math.random());
    
    
-    let test = 0; 
-    test = Math.random();
+    let handGen = undefined; 
+    handGen = Math.floor(Math.random() * 3);
+    console.log(handGen)
 
-    if (test < 0.5) {
-        console.log("true");
+    if (handGen === 0) {
+        console.log("Rock");
+    } else if (handGen === 1) {
+     console.log("Paper")
     } else {
-     console.log("false")
+        console.log("Scissor")
     }
    
-    
-    if (Math.random == 1) {
-        console.log()
-    }
 
-    if (Math.random <= 0.33) {
-        console.log(Rock)
-    }
-
-    getRandomInt(3)
-    console.log(getRandomInt(3))
 }
-
-
-
-
-
 
 
 getComputerChoice()
