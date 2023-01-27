@@ -17,31 +17,63 @@
         //parameters
         //return: Need to understand!
 
-function getComputerChoice() {
+
     //Rock = 0
     //Paper = 1
     //Scissor = 2
-    const Rock = 0;
-    const Paper = 1;
-    const Scissor = 2;
-    Math.floor(Math.random() * 3);
-    console.log(Math.random());
-   
-   
-    let handGen = undefined; 
-    handGen = Math.floor(Math.random() * 3);
-    console.log(handGen)
+  
+
+const rock = 0;
+const paper = 1;
+const scissor = 2;
+
+function getComputerChoice() {
+let handGen = Math.floor(Math.random() * 3);
 
     if (handGen === 0) {
         console.log("Rock");
     } else if (handGen === 1) {
-     console.log("Paper")
-    } else {
+        console.log("Paper")
+    } else if (handGen === 2) {
         console.log("Scissor")
     }
-   
-
 }
 
 
+function getPlayerChoice() {
+ let player = prompt("Choose rock, paper or scissors")
+ console.log(player);
+ if (player === rock) {
+    console.log("I choose rock");
+ } else if (player === paper) {
+    console.log("I choose paper"); 
+ } else if (player === scissor) {
+    console.log("I choose Scissor");
+ } else {console.log("I choose wrong") }
+
+    }
+
+function playRound(playerSelection, computerSelection) {
+   alert(playerSelection + computerSelection);
+  }
+   
+  const playerSelection = getPlayerChoice();
+  const computerSelection = getComputerChoice();
+  console.log(playRound(playerSelection, computerSelection));
+
+  playRound(scissor, paper)
+  
 getComputerChoice()
+getPlayerChoice()
+
+
+
+
+function showMessage(from, text) { 
+    alert(from + ': ' + text);
+  }
+  
+  showMessage('Ann', 'Hello!');
+  showMessage('Ann', "What's up?");
+
+ 
