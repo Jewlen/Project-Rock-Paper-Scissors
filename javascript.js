@@ -29,17 +29,24 @@ const scissor = 2;
 
 function getComputerChoice() {
 let handGen = Math.floor(Math.random() * 3);
-
+    
     if (handGen === 0) {
         console.log("Rock");
+        return rock;
     } else if (handGen === 1) {
         console.log("Paper")
+        return paper;
     } else if (handGen === 2) {
         console.log("Scissor")
+        return scissor;
     }
 }
 
+console.log(getComputerChoice());
 
+
+
+/*
 function getPlayerChoice() {
  let player = prompt("Choose rock, paper or scissors")
  console.log(player);
@@ -65,15 +72,8 @@ function playRound(playerSelection, computerSelection) {
   
 getComputerChoice()
 getPlayerChoice()
+*/
 
 
-
-
-function showMessage(from, text) { 
-    alert(from + ': ' + text);
-  }
-  
-  showMessage('Ann', 'Hello!');
-  showMessage('Ann', "What's up?");
 
  
