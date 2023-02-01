@@ -76,17 +76,19 @@ function playRound(playerSelection, computerSelection) {
    if (playerSelection = computerSelection) {
     console.log("Draw");
    } else if (playerSelection > computerSelection) {
-    console.log("Scissor beats Paper, Scissor wins");
-   } else console.log("null");
-  }
+    console.log("scissor beats paper, Scissor wins");
+   } else if (playerSelection < computerSelection) {
+    console.log("idk");
+   } else {console.log("testing")}
+}
  
  
-/*
+
 
 
   console.log(playRound(playerSelection, computerSelection));
 
-*/
+
 
 
 
