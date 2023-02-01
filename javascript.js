@@ -42,37 +42,52 @@ let handGen = Math.floor(Math.random() * 3);
     }
 }
 
-console.log(getComputerChoice());
+//console.log(getComputerChoice());
 
-
-
-/*
 function getPlayerChoice() {
- let player = prompt("Choose rock, paper or scissors")
+ let player = prompt("Choose rock, paper or scissors").toLowerCase();
  console.log(player);
- if (player === rock) {
+ if (player === playerRock) {
     console.log("I choose rock");
- } else if (player === paper) {
+    return rock;
+ } else if (player === playerPaper) {
     console.log("I choose paper"); 
- } else if (player === scissor) {
+    return paper;
+ } else if (player === playerScissor) {
     console.log("I choose Scissor");
+    return scissor;
  } else {console.log("I choose wrong") }
+}
 
-    }
+let playerRock = "rock"
+let playerPaper = "paper"
+let playerScissor = "scissor"
+
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
+
+
+
+//console.log(getPlayerChoice());
+
 
 function playRound(playerSelection, computerSelection) {
    alert(playerSelection + computerSelection);
+   if (playerSelection = computerSelection) {
+    console.log("Draw");
+   } else if (playerSelection > computerSelection) {
+    console.log("Scissor beats Paper, Scissor wins");
+   } else console.log("null");
   }
-   
-  const playerSelection = getPlayerChoice();
-  const computerSelection = getComputerChoice();
+ 
+ 
+/*
+
+
   console.log(playRound(playerSelection, computerSelection));
 
-  playRound(scissor, paper)
-  
-getComputerChoice()
-getPlayerChoice()
 */
+
 
 
 
