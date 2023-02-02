@@ -23,9 +23,9 @@
     //Scissor = 2
   
 
-const rock = 0;
-const paper = 1;
-const scissor = 2;
+const rock = "0";
+const paper = "1";
+const scissor = "2";
 
 function getComputerChoice() {
 let handGen = Math.floor(Math.random() * 3);
@@ -72,14 +72,23 @@ const computerSelection = getComputerChoice();
 
 
 function playRound(playerSelection, computerSelection) {
-   alert(playerSelection + computerSelection);
-   if (playerSelection = computerSelection) {
+   let match = playerSelection + computerSelection;
+   console.log(match);
+   if (match === "00" || match === "11" || match === "22") {
     console.log("Draw");
-   } else if (playerSelection > computerSelection) {
-    console.log("scissor beats paper, Scissor wins");
-   } else if (playerSelection < computerSelection) {
-    console.log("idk");
-   } else {console.log("testing")}
+} else if (match === "01") {
+    console.log("paper beats rock, Player Wins");
+} else if (match === "10") {
+    console.log("paper beats rock, Computer Wins");
+} else if (match === "02") {
+    console.log("rock beats scissors, Player Wins");
+} else if (match === "20") {
+    console.log("rock beats scissors, Computer Wins");
+} else if (match === "12") {
+    console.log("Scissors beats Paper, Player Wins");
+} else if (match === "21") {
+    console.log("Scissors beats Paper, Computer Wins");
+   } else {console.log("testing")} 
 }
  
  
