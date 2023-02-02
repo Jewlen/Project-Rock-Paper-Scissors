@@ -75,24 +75,24 @@ function playRound(playerSelection, computerSelection) {
    let match = playerSelection + computerSelection;
    console.log(match);
    if (match === "00" || match === "11" || match === "22") {
-    console.log("Draw");
+    alert("Draw");
 } else if (match === "01") {
-    console.log("paper beats rock, Player Wins");
+    alert("paper beats rock, Player Wins");
     //return playerWins;
 } else if (match === "10") {
-    console.log("paper beats rock, Computer Wins");
+    alert("paper beats rock, Computer Wins");
     //return computerWins;
 } else if (match === "02") {
-    console.log("rock beats scissors, Player Wins");
+    alert("rock beats scissors, Player Wins");
     //return playerWins;
 } else if (match === "20") {
-    console.log("rock beats scissors, Computer Wins");
+    alert("rock beats scissors, Computer Wins");
     //return computerWins;
 } else if (match === "12") {
-    console.log("Scissors beats Paper, Player Wins");
+    alert("Scissors beats Paper, Player Wins");
     //return playerWins;
 } else if (match === "21") {
-    console.log("Scissors beats Paper, Computer Wins");
+    alert("Scissors beats Paper, Computer Wins");
     //return computerWins;
    } else {console.log("testing")} 
 }
