@@ -41,7 +41,6 @@ const computerSelection = getComputerChoice();
 
 game();  
    
-
 function getComputerChoice() {
 let handGen = Math.floor(Math.random() * 3);
     
@@ -81,10 +80,10 @@ function playRound(playerSelection, computerSelection) {
    if (match === "00" || match === "11" || match === "22") {
     alert("Draw");
 } else if (match === "01") {
-    alert("paper beats rock, Player Wins");
+    alert("paper beats rock, Computer Wins");
     //return playerWins;
 } else if (match === "10") {
-    alert("paper beats rock, Computer Wins");
+    alert("paper beats rock, Player Wins");
     //return computerWins;
 } else if (match === "02") {
     alert("rock beats scissors, Player Wins");
@@ -100,7 +99,7 @@ function playRound(playerSelection, computerSelection) {
     //return computerWins;
    } else {console.log("testing")} 
 }
- console.log(playRound(playerSelection, computerSelection));
+ //console.log(playRound(playerSelection, computerSelection));
  
 
 
