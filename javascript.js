@@ -21,7 +21,16 @@
     //Rock = 0
     //Paper = 1
     //Scissor = 2
-  
+
+    function game() {
+    for (let i = 1; i <= 5; i++) {
+        console.log(i)
+        console.log(getComputerChoice(), getPlayerChoice(), playRound(playerSelection, computerSelection));
+    }
+}
+
+game();  
+   
 
 const rock = "0";
 const paper = "1";
@@ -42,18 +51,16 @@ let handGen = Math.floor(Math.random() * 3);
     }
 }
 
-//console.log(getComputerChoice());
-
 function getPlayerChoice() {
- let player = prompt("Choose rock, paper or scissors").toLowerCase();
- console.log(player);
- if (player === playerRock) {
+ let playerInput = prompt("Choose rock, paper or scissors").toLowerCase();
+ console.log(playerInput);
+ if (playerInput === playerRock) {
     console.log("I choose rock");
     return rock;
- } else if (player === playerPaper) {
+ } else if (playerInput === playerPaper) {
     console.log("I choose paper"); 
     return paper;
- } else if (player === playerScissor) {
+ } else if (playerInput === playerScissor) {
     console.log("I choose Scissor");
     return scissor;
  } else {console.log("I choose wrong") }
@@ -66,9 +73,6 @@ let playerScissor = "scissor"
 const playerSelection = getPlayerChoice();
 const computerSelection = getComputerChoice();
 
-
-
-//console.log(getPlayerChoice());
 
 
 function playRound(playerSelection, computerSelection) {
@@ -96,25 +100,19 @@ function playRound(playerSelection, computerSelection) {
     //return computerWins;
    } else {console.log("testing")} 
 }
+ console.log(playRound(playerSelection, computerSelection));
  
- 
-function game() {
-
-
-}
-
-game();
-
-//let test = playRound(playerSelection, computerSelection);
-
-
-
-
-  console.log(playRound(playerSelection, computerSelection));
 
 
 
 
 
+//have for loop go from 1 to 5, with each number representing a round
+//have the round unction be carried out on each number
+//keep tally of weither computer or player loses/wins
 
- 
+ /*if (i === 1 || i === 2 || i === 3 || i === 4 || i === 5) {
+            getComputerChoice();
+            getPlayerChoice();
+            playRound(playerSelection, computerSelection);
+        }*/
