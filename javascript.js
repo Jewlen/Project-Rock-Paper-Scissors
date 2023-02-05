@@ -21,6 +21,16 @@
     //Rock = 0
     //Paper = 1
     //Scissor = 2
+const rock = "0";
+const paper = "1";
+const scissor = "2";
+
+let playerRock = "rock"
+let playerPaper = "paper"
+let playerScissor = "scissor"
+
+const playerSelection = getPlayerChoice();
+const computerSelection = getComputerChoice();
 
     function game() {
     for (let i = 1; i <= 5; i++) {
@@ -31,10 +41,6 @@
 
 game();  
    
-
-const rock = "0";
-const paper = "1";
-const scissor = "2";
 
 function getComputerChoice() {
 let handGen = Math.floor(Math.random() * 3);
@@ -66,12 +72,6 @@ function getPlayerChoice() {
  } else {console.log("I choose wrong") }
 }
 
-let playerRock = "rock"
-let playerPaper = "paper"
-let playerScissor = "scissor"
-
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
 
 
 
