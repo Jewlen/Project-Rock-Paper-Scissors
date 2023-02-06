@@ -29,8 +29,7 @@ let playerRock = "rock"
 let playerPaper = "paper"
 let playerScissor = "scissor"
 
-const playerSelection = getPlayerChoice();
-const computerSelection = getComputerChoice();
+
 
     function game() {
     for (let i = 1; i <= 5; i++) {
@@ -40,7 +39,10 @@ const computerSelection = getComputerChoice();
 }
 
 game();  
-   
+
+   const playerSelection = getPlayerChoice();
+    const computerSelection = getComputerChoice();
+    
 function getComputerChoice() {
 let handGen = Math.floor(Math.random() * 3);
     
