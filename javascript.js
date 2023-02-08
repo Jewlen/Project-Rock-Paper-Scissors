@@ -32,17 +32,20 @@ let playerScissor = "scissor"
 
 
     function game() {
+       
     for (let i = 1; i <= 5; i++) {
         console.log(i)
-        console.log(getComputerChoice(), getPlayerChoice(), playRound(playerSelection, computerSelection));
+        let playerSelection = getPlayerChoice();
+        let computerSelection = getComputerChoice();  
+        playRound(playerSelection, computerSelection);
     }
 }
-
+ 
 game();  
 
-   const playerSelection = getPlayerChoice();
-    const computerSelection = getComputerChoice();
-    
+
+
+
 function getComputerChoice() {
 let handGen = Math.floor(Math.random() * 3);
     
@@ -101,7 +104,7 @@ function playRound(playerSelection, computerSelection) {
     //return computerWins;
    } else {console.log("testing")} 
 }
- //console.log(playRound(playerSelection, computerSelection));
+ //playRound(playerSelection, computerSelection);
  
 
 
