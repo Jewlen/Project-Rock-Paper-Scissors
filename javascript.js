@@ -29,6 +29,9 @@ let playerRock = "rock"
 let playerPaper = "paper"
 let playerScissor = "scissor"
 
+let playerScore = 0;
+let computerScore = 0;
+
 
 
     function game() {
@@ -38,6 +41,8 @@ let playerScissor = "scissor"
         let playerSelection = getPlayerChoice();
         let computerSelection = getComputerChoice();  
         playRound(playerSelection, computerSelection);
+        console.log(playerScore);
+        console.log(computerScore);
     }
 }
  
@@ -73,7 +78,7 @@ function getPlayerChoice() {
  } else if (playerInput === playerScissor) {
     console.log("I choose Scissor");
     return scissor;
- } else {console.log("I choose wrong") }
+ } else {console.log("Are you retarded? It clearly says 'Choose rock, paper or scissor'") }
 }
 
 
@@ -85,28 +90,54 @@ function playRound(playerSelection, computerSelection) {
    if (match === "00" || match === "11" || match === "22") {
     alert("Draw");
 } else if (match === "01") {
-    alert("paper beats rock, Computer Wins");
-    //return playerWins;
+    alert("paper beats rock, Computer Wins Match");
+    ++computerScore;
 } else if (match === "10") {
-    alert("paper beats rock, Player Wins");
-    //return computerWins;
+    alert("paper beats rock, Player Wins Match");
+    ++playerScore;
 } else if (match === "02") {
-    alert("rock beats scissors, Player Wins");
-    //return playerWins;
+    alert("rock beats scissors, Player Wins Match");
+    ++playerScore;
 } else if (match === "20") {
-    alert("rock beats scissors, Computer Wins");
-    //return computerWins;
+    alert("rock beats scissors, Computer Wins Match");
+    ++computerScore;
 } else if (match === "12") {
-    alert("Scissors beats Paper, Player Wins");
-    //return playerWins;
+    alert("Scissors beats Paper, Player Wins Match");
+    ++playerScore;
 } else if (match === "21") {
-    alert("Scissors beats Paper, Computer Wins");
-    //return computerWins;
-   } else {console.log("testing")} 
+    alert("Scissors beats Paper, Computer Wins Match");
+    ++computerScore;
+   } else {console.log("Are you retarded? It clearly says 'Choose rock, paper or scissor' ")} 
 }
- //playRound(playerSelection, computerSelection);
  
+ 
+ function score() {
+    if (playerScore === computerScore) {
+        alert("Draw - No Winner For the Round");
+    } else if (playerScore > computerScore) {
+        alert("Human Player Wins Round!");
+    } else if (computerScore > playerScore) {
+        alert("Computer Wins Round!")}
+}
+score();
 
+/*
+function playerScore() {
+   if (playerWins) {
+    playerWins++;
+   } 
+
+   console.log(playerWins); 
+   
+}
+
+function computerScore() {
+    if (computerWins) {
+        computerWins++;
+       }
+
+       console.log(computerWins);
+}
 
 
 
